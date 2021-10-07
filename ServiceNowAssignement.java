@@ -23,10 +23,11 @@ public class ServiceNowAssignement {
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get(
-				"https://dev96436.service-now.com/login.do?user_name=admin&sys_action=sysverb_login&user_password=cblDQb4LD0eK");
+		
+		driver.get("https://dev101502.service-now.com/navpage.do");
+		driver.switchTo().frame(0);
 		driver.findElement(By.id("user_name")).sendKeys("admin");
-		driver.findElement(By.id("user_password")).sendKeys("Kmsrm19011997&");
+		driver.findElement(By.id("user_password")).sendKeys("Admin1997*");
 		driver.findElement(By.id("sysverb_login")).click();
 		driver.findElement(By.id("filter")).sendKeys("incident", Keys.ENTER);
 		driver.findElement(By.xpath("(//div[text()='All'])[2]")).click();
